@@ -11793,39 +11793,82 @@ div#notebook {
 <h1 id="Results:">Results:<a class="anchor-link" href="#Results:">&#182;</a></h1><h2 id="Baseline-Model">Baseline Model<a class="anchor-link" href="#Baseline-Model">&#182;</a></h2><p>Our baseline model for predicting the results of the 2018 election is a logistic model predicting whether a Democrat won, using the district's prior election results as the sole predictors. We work under the assumption that we do not know the results of the 2018 election yet, and have to make a predictive model for them. To do this, we git a baseline logistic regression model to the 2016 outcome, based on the district's prior vote share in all of the previous elections for which we have complete data.</p>
 <p>Mathematically, this is: $P(D_{win} =1) = (1+e^{-\beta X + c})^{-1}$, where $\beta$ is composed of the combined results of each election between 2004 and 2014.</p>
 <center>
-Figure 7:<br>
+<br>
 <img src ="baseline_2018.png" style="width: 500px;" align="center">
+Figure 7. Results of the baseline model with only one predictor variable (prior election results).
 </center><p>Using this simple model, we can predict the 2018 results with 86.9% accuracy.</p>
 <p>It is striking to the researchers that even with no additional covariates besides the district's past eight election results, the predictive accuracy of the model is 86.9%. Moreover, this prediction on the test set is over 5 points higher than the training set accuracy, which is 81.57%. It appears that the 2016 election may have been anomalous while 2018 was more of a 'normal' election where traditional predictors were better at predicting the outcome.</p>
 <p>Additionally, we see in Figure 7, that the results are not a simple mapping from prior vote share to predicted vote share -- it does not appear to be true that a district's election result can be assumed to be exactly the same as the past result. Specifically, the model only predicts the Democrat to win the election if the Democrat won the past election by at least ten points (Democrat vote share at least 55%), and predicts the winner to be Republican for the remaining cases.</p>
 <p>Our likely theory for the success of this model is that since prior election results are themselves products of the characteristics of the districts and of the representatives who are elected from them, the effects of many of the other predictors are already present in the prior voting reuslts.</p>
 <center>
-Figure 8:<br>
+<br>
 
 <img src="over_time_effects_DAG.png" style="width: 600px;" align="center">
-
+Figure 8. Illustration of the effect of prior years predictors on current election results.
 </center><p>
 
 This effect is shown graphically in Figure 8 above for a two-period case. In this example, the result of the election in 2016 is dependent on the racial makeup and voter wealth in that year. Since district wealth and racial makeup of a district are slow to change, these values in 2016 are likely to be very similar to those in 2018. Therefore, the 2016 election results are extremely good predictors for the 2018 results, since the prior results are the products of innumerable district-level variables that help predict the results of elections, regardless of other time-sensitive predictors.</p>
 <h2 id="Extended-Models">Extended Models<a class="anchor-link" href="#Extended-Models">&#182;</a></h2><h3 id="Model-selection-and-implementation">Model selection and implementation<a class="anchor-link" href="#Model-selection-and-implementation">&#182;</a></h3><p>Our goal of predicting the result of the midterm elections is essentially a binary classification problem with two classes (Democrat win = 1 and Republican win = 0). We have a number of choices in terms of which classification model to choose, including linear or quadratic discriminant analysis, k-nearest neighbours, decision trees or logistic regression. Given that are dataset is relatively small with 435 districts and would lead to a reasonable computational time, we decided not to use discriminant analyses.  The benefit of the simplicity of k-nearest neighbours is also limited given the nature of our dataset. Therefore, we decided to use Logistic regression and its variants to model our data. In addition, we explored the performance of decision trees (bagging and random forest) for comparison.</p>
 <p>The performance of the various models in our analysis is summarized in Table 1. The models were all trained on the data from 2005 – 2016 and then used to predict the results for 2018. The model that gave the best predictions is Logistic regression with power and interaction terms. Therefore, the results presented in this report are based on the predictions from this model.</p>
 <p>Note in Table 1 that the non-regularized models perform basically just as well as the non-regularized models. This is likely due to the fact that we have relatively few predictors to begin with, and many predictors are not highly correlated with one another (see Figure 6), so dropping variables (LASSO) or reducing the magnitude of coefficients (Ridge) does not seem necessary, especially in the degree-1 models.</p>
+<br>
 <center>
-Table 1: Model Performance
+Table 1. Performance of the different classification models explored here.
+</center>
 
-|classifier|training accuracy|test accuracy|
-|-----|-----|-----|
-|Logistic Regression|0.910281|0.896552|
-|Logistic Regression with CV (Lasso)|0.896552|0.896552|
-|Logistic Regression with CV (Ridge)|0.907971|0.896552|
-|Linear Regression (Ridge)|0.914132|0.905747|
-|Bagging|0.993454|0.896552|
-|Random Forest|0.998845|0.896552|
-|Logistic with Power terms and Interactions|0.915671|0.905747|
-</center><p>We further analyze this model below.</p>
+<table>
+  <tr>
+    <th>Classifer</th>
+    <th>Training Accuracy</th>
+    <th>Test Accuracy</th>
+  </tr>
+  <tr>
+    <td>Logistic Regression</td>
+    <td>0.910281</td>
+    <td>0.896552</td>
+  </tr>
+   <tr>
+    <td>Logistic Regression with CV and Lasso </td>
+    <td>0.896552</td>
+    <td>0.896552</td>
+  </tr>
+
+   <tr>
+    <td>Logistic Regression with CV and Ridge </td>
+    <td>0.907971</td>
+    <td>0.896552</td>
+  </tr>
+
+   <tr>
+    <td>Linear Regression with Ridge </td>
+    <td>0.914132</td>
+    <td>0.905747</td>
+  </tr>
+
+ <tr>
+    <td>Bagging </td>
+    <td>0.993454</td>
+    <td>0.896552</td>
+  </tr>
+
+ <tr>
+    <td>Random Forest </td>
+    <td>0.998845</td>
+    <td>0.896552</td>
+  </tr>
+
+ <tr>
+    <td>Logistic with Power terms and Interactions </td>
+    <td>0.915671</td>
+    <td>0.905747</td>
+  </tr>
+
+</table>
+
+<p>We further analyze this model below.</p>
 <center>
-Figure 9: 
 <img src="predictions_on_predictors.png" style="width: 600px;" align="center">
+Figure 9. Predicted probabilities as a function of each predictor. The model predictions appear to be quite good except in very close election races.
 </center><p>
 
 To test our model performance, we use the fitted model to predict the 2018 election results, using only data from 2018. Figure 9 above shows the predicted probabilities of the Democratic candidate winning, translated to what his/her expected election margin might be. The <em>x</em>-axis for each plot is the value of the untransformed predictor set.</p>

@@ -11827,8 +11827,9 @@ div#notebook {
 <p>None of our data had missing values, though the estimates that the ACS makes are based at least partially on hot-deck imputation of missing values. The ACS describes hot-deck encoding as a method by which "sampled units are ordered by some frame variables and a unit’s missing items are assigned from a unit – usually the nearest unit in the ordered frame list – within the subset of 'donors' defined as units sharing certain geographic, frame, and possibly demographic attributes with the unit to be imputed (<a href="https://www.census.gov/content/dam/Census/library/working-papers/2015/acs/2015_Slud_01.pdf">Wright et al. 2015, p.7</a>). <br>
 Essentially, the Census Bureau matches missing observations on non-missing observations using observable characteristics present in both respondents, and imputes the missing value probabalistically, given a set of potential matches. It is unclear to what extent this imputation affects our findings, but given that we are only looking at top-level variables within each district, these issues should be minimal.</p>
 <h2 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis">&#182;</a></h2><h3 id="District-level-variables">District-level variables<a class="anchor-link" href="#District-level-variables">&#182;</a></h3><center>
-Figure 3 <br>
+<br>
 <img src="violin_plots.png" style="width: 600px;" align="center">
+Figure 3. Change in the distribution of predictor variables over time.
 </center>
 In Figure 3, we see the distribution of district-level variables over time in their original scale. The first aspect to note is the relatively high range of most of the predictors -- while the bulk of districts for each predictor/year are concentrated in one range, there are several important extreme values for each. For example, in the vast majority of districts, the percent of residents who are black lies at about 8%. However, in at least one district, that share is around 69%. These skewed distributions may lead to biased estimates if we use regression.  
 
@@ -11840,8 +11841,9 @@ There are multiple ways to incorporate this information. If, for example, the re
 
 
 <center>
-Figure 4:<br>
+<br>
 <img src="ntl_elections.png" style="width: 500px;" align="center">
+Figure 4. Seat share of the democrats in the U.S. House as a function of time. The colors (blue vs. red) represent the party of the president in power at the time of elections.
 </center><p>
 
 Above, we see the percent seats held by Democrats in the House over time and under Presidents from different parties. This plot shows the midterm advantage enjoyed by the non-presidential party in American politics -- at midterm elections (two years after the President was [re-]elected), voters tend to support the party in opposition. This is seen in the graph above by steep drop-offs in the proportion of House seats held be Democrats 1994-1996 and 2008-2010. Additionally, Republicans lost a large share of seats 1982-1984 and 2006-2008.</p>
@@ -11849,14 +11851,17 @@ Above, we see the percent seats held by Democrats in the House over time and und
 <p>In Figure 5 below, we have histograms of district-level election results from 2006 to 2018, categorized between those that a Democrat won and those where the Republican candidate did. The <em>x</em>-axis represents the candidate's margin of victory. When the candidate runs unopposed, his or her district will appear at the extremes of the plot,  since, by definition, they won all of the votes in that district. When there are many races that are very close, we see spikes in the histogram around the middle of the <em>x</em>-axis. There does not appear to be a clear pattern over time in the closeness of elections -- while there were a very high number of close elections in 2010, in 2016, very few elections were close to being a tie. Instead, it appears that many candidates won competitive races with a comfortable margin of victory (around 10-15 points).</p>
 <p>Moving to 2018, we see a very high number of very close elections. While this may be good for democracy, indicating competitive races, it makes the statistician's job very difficult, since the margin for error decreases significantly. When only 2 points separate the candidates, it becomes much more likely that our models will predict the 'wrong' winner.</p>
 <center>
-Figure 5:<br>
+<br>
 <img src="election_margins.png" style="width: 800px;" align="center">
+Figure 5. Histogram of election winners by margin of victory for 2006-2018.
+
 </center><h3 id="Summary-of-EDA">Summary of EDA<a class="anchor-link" href="#Summary-of-EDA">&#182;</a></h3><p>
 
 Below, we see a heatmap of correlations between all of the explanatory variables in our model. Interestingly, we only see very high correlations among variables that proxy for social class: education, income, and wealth. If we use regularization in our models, the effect of these correlations will be limited.</p>
 <center>
-Figure 6:<br>
+<br>
 <img src="correlation_plot.png" style="width: 700px;" align="center">
+Figure 6. Correlation between the predictor variables.
 </center><p><strong>Time effects</strong></p>
 <p>
 
