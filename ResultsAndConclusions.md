@@ -31,9 +31,10 @@ Additionally, we see in <a href="#figure7">Figure 7</a>, that the results are no
 
 Our likely theory for the success of this model is that since prior election results are themselves products of the characteristics of the districts and of the representatives who are elected from them, the effects of many of the other predictors are already present in the prior voting reuslts. 
 
+<p id="figure8" class="fig-caption">Figure 8. Illustration of the effect of prior years predictors on current election results.</p>
+
 ![over_time_effects_DAG]({{ "assets/over_time_effects_DAG.png" }})
 
-<p id="figure8" class="fig-caption">Figure 8. Illustration of the effect of prior years predictors on current election results.</p>
 
 This effect is shown graphically in <a href="#figure8">Figure 8</a> above for a two-period case. In this example, the result of the election in 2016 is dependent on the racial makeup and voter wealth in that year. Since district wealth and racial makeup of a district are slow to change, these values in 2016 are likely to be very similar to those in 2018. Therefore, the 2016 election results are extremely good predictors for the 2018 results, since the prior results are the products of innumerable district-level variables that help predict the results of elections, regardless of other time-sensitive predictors. 
 
