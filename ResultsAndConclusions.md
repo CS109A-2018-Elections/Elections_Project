@@ -83,9 +83,9 @@ Crucially, these plots show us the importance of including uncertainty in the mo
                             np.abs(ytest.values[i]-0.5) >0.04]
 
 accurate_confident_mean = np.mean(y_test_predict_bool[confident_results_indices]\
-                                 == y_test[confident_results_indices])
-                                 print("Our model confidently predicts the outcome with ",
-      np.round(accurate_confident_mean*100,2), "% accuracy.", sep ="")
+                               == y_test[confident_results_indices])
+ print("Our model confidently predicts the outcome with ",
+    np.round(accurate_confident_mean*100,2), "% accuracy.", sep ="")
 </code></pre>
 
 Finally, these plots show us the limitations of using only demographic and political information without supplementing it with polling data. These limitations are further discussed in the Conclusions and Summary.
