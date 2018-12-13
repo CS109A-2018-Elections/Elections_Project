@@ -4,7 +4,7 @@ layout: default
 
 {% include navigation.html %}
 
-## Description of Data and EDA
+# Description of Data and EDA
 
 Due to the nature of politics, all of our data is observational -- without fortuitous exogenous shocks, there is no way to make causal claims about what social or political factors produce an election outcome. Despite this caveat, we explore the correlations between variables and our outcome, whether, for each district, a Democrat or Republican candidate wins in the 2018 Congressional Election.
 

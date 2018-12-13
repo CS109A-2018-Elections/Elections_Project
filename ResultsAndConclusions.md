@@ -4,7 +4,7 @@ layout: default
 
 {% include navigation.html %}
 
-# Results 
+# Results
 
 ## Baseline Model
 
@@ -85,7 +85,7 @@ accurate_confident_mean = np.mean(y_test_predict_bool[confident_results_indices]
 
 Finally, these plots show us the limitations of using only demographic and political information without supplementing it with polling data. These limitations are further discussed in the Conclusions and Summary.
 
-# Conclusions and Summary
+## Conclusions and Summary
 
 In this project, we aimed to predict the results of the U.S. Congressional Elections in 2018.
 
