@@ -62,7 +62,7 @@ Table 1: Model Performance
 
 We further analyze this model below.
 
-<p class="fig-caption" id="figure9">Figure 9. Predicted probabilities as a function of each predictor. The model predictions appear to be quite good except in very close election races.<p>
+<p class="fig-caption" id="figure9">Figure 9. Predicted probabilities as a function of each predictor. The model predictions appear to be quite good except in very close election races.</p>
 
 ![predictions_predictors](assets/predictions_on_predictors.png)
 
