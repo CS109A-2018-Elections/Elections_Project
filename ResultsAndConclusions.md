@@ -46,9 +46,9 @@ Our goal of predicting the result of the midterm elections is essentially a bina
 
 The performance of the various models in our analysis is summarized in Table 1. The models were all trained on the data from 2005 – 2016 and then used to predict the results for 2018. The model that gave the best predictions is Logistic regression with power and interaction terms. Therefore, the results presented in this report are based on the predictions from this model.
 
-Note in Table 1 that the non-regularized models perform basically just as well as the non-regularized models. This is likely due to the fact that we have relatively few predictors to begin with, and many predictors are not highly correlated with one another (see <a href="data.html#figure6">Figure 6</a>), so dropping variables (LASSO) or reducing the magnitude of coefficients (Ridge) does not seem necessary, especially in the degree-1 models. 
+Note in Table 1 that the non-regularized models perform basically just as well as the non-regularized models. This is likely due to the fact that we have relatively few predictors to begin with, and many predictors are not highly correlated with one another (see <a href="EDA#figure6">Figure 6</a>), so dropping variables (LASSO) or reducing the magnitude of coefficients (Ridge) does not seem necessary, especially in the degree-1 models. 
 
-Table 1: Model Performance
+<p class="fig-caption">Table 1: Model Performance</p>
 
 |classifier|training accuracy|test accuracy|
 |-----|-----|-----|

@@ -75,10 +75,11 @@ There are multiple ways to incorporate this information. If, for example, the re
 
 ### National-level variables
 
-![Government Composition, 1980 - 2016](assets/ntl_elections.png)
-
 <p class="fig-caption">Figure 4. 
 Seat share of the democrats in the U.S. House as a function of time. The colors (blue vs. red) represent the party of the president in power at the time of elections.</p>
+
+![Government Composition, 1980 - 2016](assets/ntl_elections.png)
+
 
 Above, we see the percent seats held by Democrats in the House over time and under Presidents from different parties. This plot shows the midterm advantage enjoyed by the non-presidential party in American politics -- at midterm elections (two years after the President was [re-]elected), voters tend to support the party in opposition. This is seen in the graph above by steep drop-offs in the proportion of House seats held be Democrats 1994-1996 and 2008-2010. Additionally, Republicans lost a large share of seats 1982-1984 and 2006-2008.
 
@@ -88,17 +89,18 @@ In Figure 5 below, we have histograms of district-level election results from 20
 
 Moving to 2018, we see a very high number of very close elections. While this may be good for democracy, indicating competitive races, it makes the statistician's job very difficult, since the margin for error decreases significantly. When only 2 points separate the candidates, it becomes much more likely that our models will predict the 'wrong' winner.  
 
+<p id="figure5" class="fig-caption">Figure 5. Histogram of election winners by margin of victory for 2006-2018.</p>
+
 ![Histogram of Election Winners by Margin of Victory](assets/election_margins.png)
 
-<p id="figure5" class="fig-caption">Figure 5. Histogram of election winners by margin of victory for 2006-2018.</p>
 
 ### Summary of EDA
 
 Below, we see a heatmap of correlations between all of the explanatory variables in our model. Interestingly, we only see very high correlations among variables that proxy for social class: education, income, and wealth. If we use regularization in our models, the effect of these correlations will be limited. 
 
-![Correlation of model variables](assets/correlation_plot.png)
-
 <p id="figure6" class="fig-caption">Figure 6. Correlation between the predictor variables.</p>
+
+![Correlation of model variables](assets/correlation_plot.png)
 
 **Time effects**
 
