@@ -19,7 +19,7 @@ $$
 where $$\beta$$ is composed of the combined results of each election between 2004 and 2014.
 
 
-<p id="figure7"class="fig-caption">Figure 7</p>
+<p id="figure7" class="fig-caption">Figure 7. Results of the baseline model with only one predictor variable (prior election results)</p>
 
 ![baseline_model_plot]({{ "assets/baseline_2018.png" }})
 
@@ -33,7 +33,7 @@ Our likely theory for the success of this model is that since prior election res
 
 ![over_time_effects_DAG]({{ "assets/over_time_effects_DAG.png" }})
 
-<p id="figure8" class="fig-caption">Figure 8</p>
+<p id="figure8" class="fig-caption">Figure 8. Illustration of the effect of prior years predictors on current election results.</p>
 
 This effect is shown graphically in <a href="#figure8">Figure 8</a> above for a two-period case. In this example, the result of the election in 2016 is dependent on the racial makeup and voter wealth in that year. Since district wealth and racial makeup of a district are slow to change, these values in 2016 are likely to be very similar to those in 2018. Therefore, the 2016 election results are extremely good predictors for the 2018 results, since the prior results are the products of innumerable district-level variables that help predict the results of elections, regardless of other time-sensitive predictors. 
 
@@ -62,7 +62,7 @@ Table 1: Model Performance
 
 We further analyze this model below.
 
-<p class="fig-caption" id="figure9">Figure 9</p>
+<p class="fig-caption" id="figure9">Figure 9. Predicted probabilities as a function of each predictor. The model predictions appear to be quite good except in very close election races.<p>
 
 ![predictions_predictors](assets/predictions_on_predictors.png)
 

@@ -62,7 +62,7 @@ Essentially, the Census Bureau matches missing observations on non-missing obser
 
 ### District-level variables
 
-<p id="figure3" class="fig-caption">Figure 3</p>
+<p id="figure3" class="fig-caption">Figure 3. Change in the distribution of predictor variables over time.</p>
 
 ![Socio-economic Variables over Time, 2006 - 2018](assets/violin_plots.png)
 
@@ -77,7 +77,8 @@ There are multiple ways to incorporate this information. If, for example, the re
 
 ![Government Composition, 1980 - 2016](assets/ntl_elections.png)
 
-<p class="fig-caption">Figure 4</p>
+<p class="fig-caption">Figure 4. 
+Seat share of the democrats in the U.S. House as a function of time. The colors (blue vs. red) represent the party of the president in power at the time of elections.</p>
 
 Above, we see the percent seats held by Democrats in the House over time and under Presidents from different parties. This plot shows the midterm advantage enjoyed by the non-presidential party in American politics -- at midterm elections (two years after the President was [re-]elected), voters tend to support the party in opposition. This is seen in the graph above by steep drop-offs in the proportion of House seats held be Democrats 1994-1996 and 2008-2010. Additionally, Republicans lost a large share of seats 1982-1984 and 2006-2008.
 
@@ -89,7 +90,7 @@ Moving to 2018, we see a very high number of very close elections. While this ma
 
 ![Histogram of Election Winners by Margin of Victory](assets/election_margins.png)
 
-<p id="figure5" class="fig-caption">Figure 5</p>
+<p id="figure5" class="fig-caption">Figure 5. Histogram of election winners by margin of victory for 2006-2018.</p>
 
 ### Summary of EDA
 
@@ -97,7 +98,7 @@ Below, we see a heatmap of correlations between all of the explanatory variables
 
 ![Correlation of model variables](assets/correlation_plot.png)
 
-<p id="figure6" class="fig-caption">Figure 6</p>
+<p id="figure6" class="fig-caption">Figure 6. Correlation between the predictor variables.</p>
 
 **Time effects**
 
