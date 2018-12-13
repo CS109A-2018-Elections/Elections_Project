@@ -104,4 +104,4 @@ Below, we see a heatmap of correlations between all of the explanatory variables
 
 It is likely that the results of more recent elections predict the 2018 outcome better than do those from earlier years. This might be due to factors such as incumbency, changes in ideology, or changes in racial/ethnic makeup. For this reason, we include an interaction term between the prior vote results and the year in which that result occurred.
 
-[&lt; Previous: Motivation]("Motivation") &nbsp; [Next: Code &gt;](Code)
+[&lt; Previous: Motivation](Motivation) &nbsp; [Next: Code &gt;](Code)
