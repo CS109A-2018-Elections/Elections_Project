@@ -99,4 +99,4 @@ Another point to note is that [538 used](https://fivethirtyeight.com/features/ho
 
 For future work, it would be interesting to see the effect of adding several more significant predictors to our data set such as past years' polling data. In terms of modeling, depending on size of the data set, we could explore discriminant analyses and elastic net regularization methods.
 
-[&lt; Previous: Code]("Code")
+[&lt; Previous: Code](Code)

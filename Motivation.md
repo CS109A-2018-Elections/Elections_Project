@@ -36,4 +36,4 @@ The *Times*, as well as several [others](https://www.cookpolitical.com/ratings/h
 
 Therefore, in this project, we make it a priority to emphasize the uncertainty in our model. It is highly unlikely that we will be able to accurately predict all districts, but it is likely less costly to know that the race is uncertain, than to predict the wrong outcome entirely.
 
-[Next: Description of Data and EDA &gt;]("EDA")
+[Next: Description of Data and EDA &gt;](EDA)
