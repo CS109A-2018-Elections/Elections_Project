@@ -9,6 +9,15 @@ layout: default
   .fig-caption { font-style: italic; font-weight: bold; }
 </style>
 
+<nav>
+<a href="/Elections_Project/">Home</a>
+<a href="/Elections_Project/Motivation">Motivation</a>
+<a href="/Elections_Project/EDA">Exploratory Data Analysis</a>
+<a href="/Elections_Project/Code">Code</a>
+<a href="/Elections_Project/ResultsAndConclusions">Results and Conclusions</a>
+<a href="https://www.dropbox.com/s/nhhzdqyqbww8ink/Writeup.pdf?dl=0">PDF Report</a>
+</nav>
+
 # Motivation
 
 <p id="figure1" class="fig-caption">Figure 1: "Dewey Defeats Truman" (1948)</p>
