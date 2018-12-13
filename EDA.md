@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% include "navigation.html" %}
+{% include navigation.html %}
 
 ## Description of Data and EDA
 
