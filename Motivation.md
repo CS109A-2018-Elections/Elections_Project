@@ -35,3 +35,5 @@ Following the 2016 election, the data analytics firm 538 published a [post-morte
 The *Times*, as well as several [others](https://www.cookpolitical.com/ratings/house-race-ratings), distinguished the degrees of partisanship here: Districts could be "Strong" Democrat/Republican, "Likely" Democrat/Republican, "Lean" Democrat/Republican, or a toss-up. While this method clearly distinguishes what's likely an uncompetitive race in New York (Strong Democrat), the underlying differences between these groups are opaque to the reader. By obscuring the underlying data and the uncertainty of the predictions that can be made using it, the map does more harm than good. 
 
 Therefore, in this project, we make it a priority to emphasize the uncertainty in our model. It is highly unlikely that we will be able to accurately predict all districts, but it is likely less costly to know that the race is uncertain, than to predict the wrong outcome entirely.
+
+[Next: Description of Data and EDA &gt;]("EDA")
