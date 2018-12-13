@@ -2,21 +2,7 @@
 layout: default
 ---
 
-<script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<style type="text/css">
-  .fig-caption { font-style: italic; font-weight: bold; }
-</style>
-
-<nav>
-<a href="/Elections_Project/">Home</a>
-<a href="/Elections_Project/Motivation">Motivation</a>
-<a href="/Elections_Project/EDA">Exploratory Data Analysis</a>
-<a href="/Elections_Project/Code">Code</a>
-<a href="/Elections_Project/ResultsAndConclusions">Results and Conclusions</a>
-<a href="https://www.dropbox.com/s/nhhzdqyqbww8ink/Writeup.pdf?dl=0">PDF Report</a>
-</nav>
+{% include "navigation.html" %}
 
 # Motivation
 
